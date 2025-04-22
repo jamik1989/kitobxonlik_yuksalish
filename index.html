@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Центрированная таблица</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: #000; /* Можно сменить фон при желании */
+      display: flex;
+      justify-content: center; /* Горизонтально по центру */
+      align-items: center;     /* Вертикально по центру */
+    }
+
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      max-width: 100%;
+      max-height: 100%;
+      border: none;
+      transform-origin: top left;
+      transform: scale(1);
+    }
+  </style>
+  <script>
+    // Обновление iframe каждые 30 секунд
+    setInterval(() => {
+      const iframe = document.getElementById('spreadsheet');
+      iframe.src = iframe.src;
+    }, 30000);
+  </script>
+</head>
+<body>
+  <iframe id="spreadsheet"
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9XcEDxRWL9DXB8KUyPkh_XpZoa4qb9IT5mWMha2L_6hIs60TIjHhnEAD8PvQR25v4jsEG0kuPsyaV/pubhtml?gid=0&single=true&widget=true&headers=false">
+  </iframe>
+</body>
+</html>
